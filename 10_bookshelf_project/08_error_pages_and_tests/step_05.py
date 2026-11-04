@@ -1,3 +1,6 @@
+# Запуск из корня репозитория
+# python -m pytest 10_bookshelf_project/08_error_pages_and_tests/step_05.py
+
 """
 Урок 10.8 "Страницы ошибок и тесты", шаг 5
 
@@ -98,16 +101,10 @@ def test_stats_only_own_books(client):
     assert client.get("/api/stats").get_json() == {"total": 2, "want": 0, "reading": 1, "done": 1}
 
 
-# Скрытая часть кода на Stepik после решения, она проверяет решение и печатает результат
-import sys as _sys, traceback as _tb
-_tests = [(_n, _f) for _n, _f in list(globals().items()) if _n.startswith("test_") and callable(_f)]
-for _variant in _sys.stdin.read().split():
-    _failed = 0
-    for _name, _func in _tests:
-        try:
-            _func(make_app(_variant).test_client())
-        except AssertionError:
-            _failed += 1
-        except Exception:
-            _failed += 1
-    print(_variant, "-", "все тесты прошли" if _tests and not _failed else "тесты нашли ошибку")
+# Фикстура client, чтобы тесты запускались через pytest (на Stepik её заменяет проверка)
+import pytest
+
+
+@pytest.fixture
+def client():
+    return make_app("correct").test_client()

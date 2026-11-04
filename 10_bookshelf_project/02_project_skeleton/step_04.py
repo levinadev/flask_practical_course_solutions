@@ -1,3 +1,6 @@
+# Запуск из корня репозитория
+# flask --app 10_bookshelf_project/02_project_skeleton/step_04.py run --debug
+
 """
 Урок 10.2 "Каркас проекта и фабрика", шаг 4
 
@@ -48,15 +51,3 @@ def create_app(test_config=None):
         return "Hello, Книжная полка!"
 
     return app
-
-
-# Скрытая часть кода на Stepik после решения, она проверяет решение и печатает результат
-import sys as _sys, json as _json, os as _os
-_line = _sys.stdin.read().strip()
-app = create_app(None if _line == "-" else _json.loads(_line))
-print("SECRET_KEY:", app.config["SECRET_KEY"])
-print("DATABASE:", _os.path.basename(app.config["DATABASE"]))
-print("база в папке экземпляра:", _os.path.dirname(app.config["DATABASE"]) == app.instance_path)
-print("папка экземпляра создана:", _os.path.isdir(app.instance_path))
-print("TESTING:", app.config["TESTING"])
-print("/hello:", app.test_client().get("/hello").get_data(as_text=True))

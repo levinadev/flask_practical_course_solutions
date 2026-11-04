@@ -1,3 +1,6 @@
+# Запуск из корня репозитория
+# flask --app 10_bookshelf_project/03_database/step_05.py init-db
+
 """
 Урок 10.3 "База данных", шаг 5
 
@@ -84,29 +87,10 @@ def init_app(app):
     app.cli.add_command(init_db_command)
 
 
-# Скрытая часть кода на Stepik после решения, она проверяет решение и печатает результат
-import sys as _sys, os as _os, tempfile as _tf, sqlite3 as _sq
+# Приложение для запуска команды (на Stepik его создаёт проверка)
+import os
+import tempfile
+
 app = Flask(__name__)
-app.config["DATABASE"] = _os.path.join(_tf.mkdtemp(), "test.sqlite")
+app.config["DATABASE"] = os.path.join(tempfile.gettempdir(), "bookshelf.sqlite")
 init_app(app)
-_runner = app.test_cli_runner()
-for _cmd in _sys.stdin.read().split():
-    if _cmd == "tables":
-        with app.app_context():
-            print("таблицы:", sorted(r[0] for r in get_db().execute("SELECT name FROM sqlite_master WHERE type = 'table' AND name NOT LIKE 'sqlite_%'")))
-    elif _cmd == "same":
-        with app.app_context():
-            print("одно соединение на контекст:", get_db() is get_db())
-    elif _cmd == "closed":
-        with app.app_context():
-            _db = get_db()
-        try:
-            _db.execute("SELECT 1")
-            print("соединение закрыто: False")
-        except _sq.ProgrammingError:
-            print("соединение закрыто: True")
-    elif _cmd == "rows":
-        with app.app_context():
-            print("строки как словари:", isinstance(get_db().execute("SELECT 1 AS x").fetchone(), _sq.Row))
-    else:
-        print(_runner.invoke(args=[_cmd]).output.strip())
