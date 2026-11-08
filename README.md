@@ -30,7 +30,7 @@ pip install flask==3.0.3 pytest
 Команды выполняются из корня репозитория. Например, так запускается первая задача.
 
 ```bash
-flask --app 02_flask_intro/03_install_and_first_app/step_06.py run --debug
+flask --app 02_flask_intro/04_install_and_first_app/step_06.py run --debug
 ```
 
 Откройте в браузере адрес `http://127.0.0.1:5000` и допишите к нему путь из примера ввода, например `/hello`. Сервер останавливается клавишами `Ctrl+C`.
@@ -47,8 +47,8 @@ flask --app 02_flask_intro/03_install_and_first_app/step_06.py run --debug
 
 | Урок | Шаг | Файл |
 |---|---|---|
-| 2.3 Установка и первое приложение | 6 | [`02_flask_intro/03_install_and_first_app/step_06.py`](02_flask_intro/03_install_and_first_app/step_06.py) |
-| 2.3 Установка и первое приложение | 7 | [`02_flask_intro/03_install_and_first_app/step_07.py`](02_flask_intro/03_install_and_first_app/step_07.py) |
+| 2.4 Установка и первое приложение | 6 | [`02_flask_intro/04_install_and_first_app/step_06.py`](02_flask_intro/04_install_and_first_app/step_06.py) |
+| 2.4 Установка и первое приложение | 7 | [`02_flask_intro/04_install_and_first_app/step_07.py`](02_flask_intro/04_install_and_first_app/step_07.py) |
 
 ### 3. Маршруты
 

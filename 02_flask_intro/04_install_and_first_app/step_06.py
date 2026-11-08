@@ -1,8 +1,8 @@
 # Запуск из корня репозитория
-# flask --app 02_flask_intro/03_install_and_first_app/step_06.py run --debug
+# flask --app 02_flask_intro/04_install_and_first_app/step_06.py run --debug
 
 """
-Урок 2.3 "Установка и первое приложение", шаг 6
+Урок 2.4 "Установка и первое приложение", шаг 6
 
 Создайте Flask-приложение `app` с одной страницей. По адресу `/` оно должно возвращать текст `Hello,
 Flask!`.
