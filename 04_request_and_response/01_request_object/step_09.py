@@ -4,19 +4,20 @@
 """
 Урок 4.1 "Объект request", шаг 9
 
-Создайте приложение `app` с маршрутом `/api/total`, который принимает POST-запрос с JSON вида
-`{"prices": [100, 250, 40]}`. Ответ это сумма цен в виде строки, например `390`.
+Создайте приложение `app` с маршрутом `/register`, который принимает POST-запросы с полями формы
+`name` и `city`. Ответ `<name> из города <city> зарегистрирован`. Если поле `city` не заполнено,
+используйте вместо него `неизвестно`.
 
 Запускать сервер не нужно, строка `app.run()` в решении не нужна, запросы к приложению отправит
 система.
 
 Пример ввода:
 
-    POST /api/total {"prices": [100, 250, 40]}
+    POST /register name=Анна&city=Казань
 
 Пример вывода:
 
-    200 390
+    200 Анна из города Казань зарегистрирован
 """
 
 # Решение
@@ -25,7 +26,8 @@ from flask import Flask, request
 app = Flask(__name__)
 
 
-@app.post("/api/total")
-def total():
-    data = request.get_json()
-    return str(sum(data["prices"]))
+@app.post("/register")
+def register():
+    name = request.form.get("name", "")
+    city = request.form.get("city") or "неизвестно"
+    return f"{name} из города {city} зарегистрирован"

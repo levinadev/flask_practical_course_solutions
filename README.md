@@ -1,6 +1,6 @@
 # Решения задач курса [Практический курс по Flask](https://stepik.org/course/302580) на Stepik
 
-В репозитории собраны все 45 задач курса на программирование. В файле задачи есть условие, пример из тестов и решение, которое проходит проверку на Stepik. Репозиторий нужен, чтобы после решения задачи можно было сравнить свой код с вариантом автора курса.
+В репозитории собраны все 39 задач курса на программирование. В файле задачи есть условие, пример из тестов и решение, которое проходит проверку на Stepik. Репозиторий нужен, чтобы после решения задачи можно было сравнить свой код с вариантом автора курса.
 
 ## Как пользоваться
 
@@ -55,9 +55,9 @@ flask --app 02_flask_intro/04_install_and_first_app/step_06.py run --debug
 | Урок | Шаг | Файл |
 |---|---|---|
 | 3.1 Маршруты и функции-представления | 6 | [`03_routes/01_routes_and_views/step_06.py`](03_routes/01_routes_and_views/step_06.py) |
-| 3.2 Переменные в адресе | 6 | [`03_routes/02_url_variables/step_06.py`](03_routes/02_url_variables/step_06.py) |
-| 3.2 Переменные в адресе | 7 | [`03_routes/02_url_variables/step_07.py`](03_routes/02_url_variables/step_07.py) |
 | 3.2 Переменные в адресе | 8 | [`03_routes/02_url_variables/step_08.py`](03_routes/02_url_variables/step_08.py) |
+| 3.2 Переменные в адресе | 9 | [`03_routes/02_url_variables/step_09.py`](03_routes/02_url_variables/step_09.py) |
+| 3.2 Переменные в адресе | 10 | [`03_routes/02_url_variables/step_10.py`](03_routes/02_url_variables/step_10.py) |
 | 3.3 HTTP-методы | 4 | [`03_routes/03_http_methods/step_04.py`](03_routes/03_http_methods/step_04.py) |
 | 3.3 HTTP-методы | 5 | [`03_routes/03_http_methods/step_05.py`](03_routes/03_http_methods/step_05.py) |
 | 3.4 url_for, redirect и abort | 6 | [`03_routes/04_url_for_redirect_abort/step_06.py`](03_routes/04_url_for_redirect_abort/step_06.py) |
@@ -67,10 +67,10 @@ flask --app 02_flask_intro/04_install_and_first_app/step_06.py run --debug
 
 | Урок | Шаг | Файл |
 |---|---|---|
+| 4.1 Объект request | 5 | [`04_request_and_response/01_request_object/step_05.py`](04_request_and_response/01_request_object/step_05.py) |
 | 4.1 Объект request | 6 | [`04_request_and_response/01_request_object/step_06.py`](04_request_and_response/01_request_object/step_06.py) |
-| 4.1 Объект request | 7 | [`04_request_and_response/01_request_object/step_07.py`](04_request_and_response/01_request_object/step_07.py) |
-| 4.1 Объект request | 8 | [`04_request_and_response/01_request_object/step_08.py`](04_request_and_response/01_request_object/step_08.py) |
 | 4.1 Объект request | 9 | [`04_request_and_response/01_request_object/step_09.py`](04_request_and_response/01_request_object/step_09.py) |
+| 4.1 Объект request | 11 | [`04_request_and_response/01_request_object/step_11.py`](04_request_and_response/01_request_object/step_11.py) |
 | 4.2 Формирование ответа и JSON | 6 | [`04_request_and_response/02_response_and_json/step_06.py`](04_request_and_response/02_response_and_json/step_06.py) |
 | 4.2 Формирование ответа и JSON | 7 | [`04_request_and_response/02_response_and_json/step_07.py`](04_request_and_response/02_response_and_json/step_07.py) |
 | 4.3 Обработка ошибок | 4 | [`04_request_and_response/03_error_handling/step_04.py`](04_request_and_response/03_error_handling/step_04.py) |
@@ -121,14 +121,3 @@ flask --app 02_flask_intro/04_install_and_first_app/step_06.py run --debug
 |---|---|---|
 | 9.1 REST API на Flask | 6 | [`09_rest_api_and_testing/01_rest_api/step_06.py`](09_rest_api_and_testing/01_rest_api/step_06.py) |
 | 9.2 Тестирование с pytest | 6 | [`09_rest_api_and_testing/02_pytest/step_06.py`](09_rest_api_and_testing/02_pytest/step_06.py) |
-
-### 10. Финальный проект "Книжная полка"
-
-| Урок | Шаг | Файл |
-|---|---|---|
-| 10.2 Каркас проекта и фабрика | 4 | [`10_bookshelf_project/02_project_skeleton/step_04.py`](10_bookshelf_project/02_project_skeleton/step_04.py) |
-| 10.3 База данных | 5 | [`10_bookshelf_project/03_database/step_05.py`](10_bookshelf_project/03_database/step_05.py) |
-| 10.5 Регистрация и вход | 5 | [`10_bookshelf_project/05_register_and_login/step_05.py`](10_bookshelf_project/05_register_and_login/step_05.py) |
-| 10.6 Книги, создание, изменение, удаление | 5 | [`10_bookshelf_project/06_books_crud/step_05.py`](10_bookshelf_project/06_books_crud/step_05.py) |
-| 10.7 JSON API | 4 | [`10_bookshelf_project/07_json_api/step_04.py`](10_bookshelf_project/07_json_api/step_04.py) |
-| 10.8 Страницы ошибок и тесты | 5 | [`10_bookshelf_project/08_error_pages_and_tests/step_05.py`](10_bookshelf_project/08_error_pages_and_tests/step_05.py) |
